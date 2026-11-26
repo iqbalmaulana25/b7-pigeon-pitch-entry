@@ -1,15 +1,16 @@
 // Pigeon Pitch, One Line
-// Writes one elevator pitch (1..200 characters) a city pigeon gives
-// investors for its startup to /output/entry.txt.
+// One elevator pitch (1..200 characters) a city pigeon gives investors
+// for its startup, written to /output/entry.txt for the make.fun judge.
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
+// Coo-ber: the rideshare joke lands first, then the startup metrics
+// (fleet size, zero churn, five-star statues) sell it as a real pitch.
 const line =
-  "Our startup turns the city's dropped crumbs into recurring revenue: twelve million pigeons, zero churn, and customers who already fly to us.";
+  "We're Coo-ber — Uber, but pigeons: twelve million drivers, zero churn, and every statue in the city already gave us five stars.";
 
-// Gate guard: the scorer only accepts a single line of 1..200 characters
-// (counted with the trailing newline this program writes).
+// The gate counts the file at 1..200 characters including the newline.
 if (line.includes("\n") || line.trim().length === 0 || line.length + 1 > 200) {
   throw new Error(`entry line breaks the gate: ${line.length} characters`);
 }
