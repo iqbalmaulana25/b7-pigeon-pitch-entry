@@ -15,4 +15,4 @@ cat /output/entry.txt
 
 ## Entry
 
-> We're Coo-ber — Uber, but pigeons: twelve million drivers, zero churn, and every statue in the city already gave us five stars.
+> We're Coo-ber — Uber, but pigeons: twelve million drivers who work for breadcrumbs, zero churn, and every statue in the city already gave us five stars.
